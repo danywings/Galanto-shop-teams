@@ -1,0 +1,588 @@
+@font-face{
+    font-family: 'Blanka';
+    src: url('/Fonts/Blanka.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Beautifully Delicious Sans';
+    src: url('/Fonts/BDSans-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #202020;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.logo img {
+    height: 35px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    font-size: 13px;
+    font-family: 'Beautifully Delicious Sans', sans-serif;
+    padding: 10px 14px;
+    font-weight: bold;
+    background-color: white;
+    color: #202020;
+    text-decoration: none;
+   
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ccc;
+}
+
+.RS {
+    display: flex;
+    gap: 15px;
+}
+
+.RS a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.RS a:hover {
+    color: #ccc;
+}
+/* Sección Hero con imagen de fondo */
+.hero {
+    background-image: url('/Images/Images-inicio/G\ \(2\).png'); /* Coloca aquí la ruta de tu imagen */
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+
+.hero h2 {
+    
+    font-family: 'Blanka', sans-serif;
+    font-size: 155px;
+    
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-family: 'Beautifully Delicious Sans', sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    font-family: 'Beautifully Delicious Sans', sans-serif;
+    background-color: white;
+    color: #202020;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    
+
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ccc;
+}
+.category{
+
+    text-align: center;
+}
+.category h3{
+    font-family: 'Beautifully Delicious Sans', sans-serif;
+    font-size: 27px;
+    margin: 40px;
+    font-weight: bold;
+
+}
+.category p{
+    font-family: 'Beautifully Delicious Sans', sans-serif;
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    
+    
+}
+/*Tarjetas*/
+.Tarjetas{
+    
+    display: flex;
+    justify-content: space-evenly;
+}
+.Icon{
+
+    border-radius: 0px 45px 0px 0px;
+}
+.Tarjeta{
+    background-color: #fdfdfd;
+    border-radius: 0px 45px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 1);
+    border: 2.5px solid black;
+}
+.Tarjeta:hover{
+    transform: translateY(-12px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
+}
+
+.Tarjeta2{
+    background-color: #fdfdfd;
+    border-radius: 0px 45px;
+    text-align: center;
+    padding: 20px;
+    
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 1);
+    border: 2.5px solid black;
+}
+
+.label{
+
+    font-family: 'Beautifully Delicious Sans', sans-serif;
+    margin-bottom: 15px;
+}
+.category h3{
+
+    font-family: 'Beautifully Delicious Sans', sans-serif;
+    font-weight: bold;
+    margin: 15px;
+}
+.Tarjeta h3{
+
+    font-family: 'Beautifully Delicious Sans', sans-serif;
+    font-weight: bold;
+    margin: 15px;
+}
+.Tarjeta a{
+    text-decoration: none;
+}
+.Tarjeta2 h3{
+
+    font-family: 'Beautifully Delicious Sans', sans-serif;
+    font-weight: bold;
+    margin: 15px;
+}
+.Tarjeta2 a{
+    text-decoration: none;
+}
+.btn2 p{
+    font-family: 'Beautifully Delicious Sans', sans-serif;
+    background-color: #202020;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+
+}
+.btn2 p:hover {
+    background-color: #454242;
+}
+
+/* Modal Styles */
+.modal {
+    
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    
+    background-color:#b3b3b3;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    height: 80vh;
+    max-width: 900px;
+    position: relative;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+
+.modal-header h2 {
+    color: #da5c2e;
+    font-family: 'Beautifully Delicious Sans', sans-serif;
+    font-size: 28px;
+    margin: 20px;
+   
+}
+
+.modal-header p {
+    font-family: 'Beautifully Delicious Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.modal-body p {
+    font-family: 'Beautifully Delicious Sans', sans-serif;
+    margin: 20px;
+    font-size: 17px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.modal-body a{
+    text-decoration: none;
+    color: white;
+}
+.cta-btn {
+    background-color: #ff4500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 15px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cta-btn:hover {
+    background-color: #e03e00;
+}
+
+.modal-images {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.modal-images img {
+    max-width: 150px;
+    margin: 10px;
+}
+.Modalogo{
+   text-align: left;
+}
+
+.close {
+    color: #000000;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #cbc6c6;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.disclaimer {
+    font-size: 12px;
+    color: gray;
+    margin-top: 20px;
+}
+/*carruse*/
+/* Footer Styles */
+footer {
+    
+    background-color: #202020;
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+
+footer h3{
+
+    
+    padding: 4px;
+    margin-bottom: 15px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 200px; /* Para que las secciones no se colapsen si hay menos espacio */
+}
+
+.footer-section h3 {
+    font-family: 'Beautifully Delicious Sans', sans-serif;
+    font-size: 18px;
+   
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(175, 175, 175);
+    text-align: left; /* Asegura que el título esté alineado a la izquierda */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Quitar márgenes por defecto del ul */
+}
+
+.footer-section ul li {
+    font-family: 'Beautifully Delicious Sans', sans-serif;
+    margin-bottom: 15px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: left; /* Alinea el texto de los enlaces a la izquierda */
+    display: block; /* Asegura que el área clicable del enlace sea todo el ancho */
+}
+
+.footer-section ul li a:hover {
+    color: hsl(0, 0%, 51%);
+}
+
+.social-media ul {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0;
+    list-style-type: none;
+    margin: 0; /* Quitar márgenes y padding adicionales en redes sociales */
+}
+
+.social-media ul li {
+    margin-right: 15px;
+}
+
+.social-media ul li a i {
+    font-size: 24px;
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #ccc;
+    margin: 0;
+}
+
+/* Carrusel */
+.carousel {
+    width: 100%;
+    max-width: 97%; /* Tamaño grande del carrusel */
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: 5; /* Ajustar el alto del carrusel */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 2s ease-in-out;
+    
+    width: 100%; /* Permite que las imágenes ocupen el 100% cada una */
+}
+
+.carousel a {
+    flex: 0 0 100%; /* Cada imagen ocupa el 100% del carrusel */
+    height: 100%; /* Asegura que la imagen se mantenga dentro de la altura del carrusel */
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Escala la imagen sin distorsión */
+}
+
+.carousel img:hover {
+    opacity: 0.9;
+}
+
+hr {
+    border: none; /* Elimina el borde predeterminado */
+    border-top: 2px solid rgb(0, 0, 0); /* Cambia el grosor y color de la línea */
+    width: 100%; /* Ajusta el ancho de la línea */
+  }
+  
+/* Estilos generales para móviles */
+@media (max-width: 767px) {
+   
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+        
+    }
+
+    .hero h2 {
+        font-size: 60px; /* Ajusta el tamaño de la tipografía */
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .Tarjetas {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .Tarjeta {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .Tarjeta2 {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .carousel {
+        height: auto; /* Ajusta el alto para que las imágenes se adapten mejor */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .modal-content {
+        width: 90%; /* Ajusta el ancho para que ocupe casi todo el ancho del dispositivo */
+        height: auto; /* Permite que el alto sea dinámico */
+        padding: 15px; /* Reduce el padding para ajustarse mejor en móviles */
+    }
+
+    .modal-header h2 {
+        font-size: 22px; /* Reduce el tamaño de la fuente del título */
+        margin: 10px;
+    }
+
+    .modal-header p,
+    .modal-body p {
+        font-size: 16px; /* Ajusta el tamaño de fuente del contenido del modal */
+        margin: 10px;
+    }
+
+    .modal-images {
+        flex-direction:row; /* Coloca las imágenes en una columna en lugar de fila */
+        align-items: center;
+        
+    }
+
+    .modal-images img {
+        max-width: 80px; /* Reduce el tamaño de las imágenes dentro del modal */
+        margin-bottom: 15px;
+        
+    }
+
+    .close {
+        font-size: 24px; /* Ajusta el tamaño del botón de cerrar */
+        top: 10px;
+        right: 10px;
+    }
+    
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navbar ul li {
+        margin-right: 15px;
+    }
+
+    .hero h2 {
+        font-size: 90px; /* Ajusta el tamaño para tablets */
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .Tarjetas {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .Tarjeta {
+        width: 35%;
+        margin-bottom: 10px;
+    }
+    .Tarjeta2 {
+        width: 35%;
+        margin-bottom: 10px;
+    }
+
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: left;
+    }
+}
+
+

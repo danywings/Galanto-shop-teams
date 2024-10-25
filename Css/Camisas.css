@@ -1,0 +1,214 @@
+@font-face{
+    font-family: 'Blanka';
+    src: url('/Fonts/Blanka.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Beautifully Delicious Sans';
+    src: url('/Fonts/BDSans-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #202020;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.logo img {
+    height: 35px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    font-size: 13px;
+    font-family: 'Beautifully Delicious Sans', sans-serif;
+    padding: 10px 14px;
+    font-weight: bold;
+    background-color: white;
+    color: #202020;
+    text-decoration: none;
+   
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ccc;
+}
+
+.RS {
+    display: flex;
+    gap: 15px;
+}
+
+.RS a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.RS a:hover {
+    color: #ccc;
+}
+
+/* Tarjetas */
+.ProductoTarjeta {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 5px;
+}
+
+.Tarjeta1 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    text-align: left;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 9px rgba(0, 0, 0, 0.1);
+    
+    width: calc(100% / 2 - 20px); /* Ancho flexible para tablets y pantallas medianas */
+    max-width: 190px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.Tarjeta1 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.Tarjeta1 h3 {
+    color: #606161;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.Tarjeta1 p {
+    color: #606161;
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+.Tarjeta1 span {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Botones */
+
+.btn1 p {
+    text-align: center;
+    font-size: 1rem;
+    background-color: #202020;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.btn1 p:hover {
+    background-color: #454242;
+}
+
+/* Estilos para el breadcrumb */
+.breadcrumb {
+    font-size: 1rem;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb a {
+    color: #3e3c3c;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: #6c757d;
+    margin-left: 5px;
+}
+
+.TituloPrincipal {
+    margin: 15px;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 767px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+        
+    }
+
+    .hero h2 {
+        font-size: 60px; /* Ajusta el tamaño de la tipografía */
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+
+    .ProductoTarjeta {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .Tarjeta1 {
+        width: 45%; /* Ancho del 45% para que se agrupen 2 tarjetas por fila */
+    }
+
+    
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navbar ul li {
+        margin-right: 15px;
+    }
+}

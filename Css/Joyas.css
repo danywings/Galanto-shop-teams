@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #202020;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.logo img {
+    height: 35px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    font-size: 13px;
+    font-family: Beautifully Delicious Sans;
+    padding: 10px 14px;
+    font-weight: bold;
+    background-color: white;
+    color: #202020;
+    text-decoration: none;
+   
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ccc;
+}
+
+.RS {
+    display: flex;
+    gap: 15px;
+}
+
+.RS a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.RS a:hover {
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        
+        align-items: flex-start;
+    }
+
+    .navbar ul li {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .ProductoTarjeta {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .Tarjeta1 {
+        width: 45%; /* Ancho del 45% para que se agrupen 2 tarjetas por fila */
+    }
+
+    .RS {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo img {
+        height: 35px;
+        margin-bottom: 10px;
+    }
+
+    .navbar a {
+        font-size: 0.70rem;
+    }
+
+    .ProductoTarjeta {
+        justify-content: center; /* Centrar las tarjetas */
+    }
+
+    .Tarjeta1 {
+        width: 42%; /* Ajustar para que quepan dos tarjetas en pantallas pequeñas */
+    }
+
+    .breadcrumb {
+        font-size: 0.9rem;
+        padding: 10px 10px;
+    }
+}
